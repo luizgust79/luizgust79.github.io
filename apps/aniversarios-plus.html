@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aniversários+ — organize aniversários, ocasiões especiais, lembretes, mensagens e backups em um só lugar.">
+  <meta name="theme-color" content="#0b1220">
+  <title>Aniversários+ | Luiz Gustavo Pinto</title>
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .anv-intro{display:grid;grid-template-columns:112px 1fr;gap:24px;align-items:center;margin:28px 0 36px}
+    .anv-logo{width:112px;height:112px;border-radius:28px;display:grid;place-items:center;background:linear-gradient(145deg,#ff3b78,#8f4be8);color:white;font-size:2rem;font-weight:900;box-shadow:0 16px 36px rgba(0,0,0,.30);border:2px solid rgba(255,255,255,.18)}
+    .anv-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .anv-badge{padding:8px 12px;border-radius:999px;background:rgba(255,59,120,.10);border:1px solid rgba(255,59,120,.30);color:#ff86ad;font-size:.84rem;font-weight:800}
+    .anv-highlight{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 40px}
+    .anv-highlight div{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .anv-highlight strong{display:block;color:#ff86ad;margin-bottom:4px;font-size:1.05rem}
+    .anv-highlight span{color:var(--muted);font-size:.93rem}
+    .anv-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 22px;padding:0;list-style:none}
+    .anv-features li{padding:14px 16px;margin:0;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .screens-title{margin-top:44px}
+    .screens-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+    .screen-card{margin:0;padding:10px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid var(--line);transition:transform .2s ease,border-color .2s ease}
+    .screen-card:hover{transform:translateY(-4px);border-color:rgba(255,59,120,.45)}
+    .screen-card img{display:block;width:100%;height:auto;border-radius:14px;background:#111}
+    .screen-card figcaption{padding:12px 6px 4px;text-align:center;font-weight:800;color:var(--text);font-size:.92rem}
+    .privacy-box{margin-top:34px;padding:20px;border-radius:18px;background:rgba(255,59,120,.08);border:1px solid rgba(255,59,120,.25)}
+    @media(max-width:900px){.screens-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.anv-highlight{grid-template-columns:1fr}}
+    @media(max-width:560px){.anv-intro{grid-template-columns:78px 1fr;gap:16px}.anv-logo{width:78px;height:78px;border-radius:20px;font-size:1.4rem}.screens-grid{grid-template-columns:1fr}.anv-features{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../"><span class="brand-mark">LG</span><span><strong>Luiz Gustavo Pinto</strong><small>Aplicativos</small></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal"><span></span><span></span><span></span><span class="sr-only">Abrir menu</span></button>
+    <nav id="menu-principal" class="main-nav">
+      <a href="../#aplicativos">Aplicativos</a>
+      <a href="../privacidade/">Privacidade</a>
+      <a href="../termos/">Termos</a>
+      <a href="../suporte/">Suporte</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Luiz Gustavo Pinto</span>
+      <h1>Aniversários+</h1>
+      <p>Organize datas especiais, lembretes e mensagens para não deixar nenhum momento importante passar.</p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="content-card">
+      <div class="anv-intro">
+        <div class="anv-logo" aria-label="Ícone estilizado do Aniversários+">A+</div>
+        <div>
+          <span class="tag">Aplicativo Android</span>
+          <h2>Aniversários+</h2>
+          <p>Um organizador completo para aniversários, casamentos, datas comemorativas e outras ocasiões importantes, com calendário, lembretes inteligentes, mensagens e backup.</p>
+          <div class="anv-badges">
+            <span class="anv-badge">Calendário de ocasiões</span>
+            <span class="anv-badge">Lembretes inteligentes</span>
+            <span class="anv-badge">Mensagens agendadas</span>
+            <span class="anv-badge">Backup e restauração</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="anv-highlight">
+        <div><strong>Datas importantes sempre à vista</strong><span>Veja aniversários e outras ocasiões por mês, semana ou dia.</span></div>
+        <div><strong>Lembretes do seu jeito</strong><span>Escolha quando deseja ser avisado e personalize horários e notificações.</span></div>
+        <div><strong>Organização com segurança</strong><span>Faça backup local ou no Google Drive e restaure seus dados quando precisar.</span></div>
+      </div>
+
+      <h2>Principais recursos</h2>
+      <ul class="anv-features">
+        <li>✓ Cadastro de aniversários e ocasiões</li>
+        <li>✓ Categorias personalizadas com cores</li>
+        <li>✓ Calendário mensal e visão da semana</li>
+        <li>✓ Lembretes inteligentes</li>
+        <li>✓ Mensagens agendadas</li>
+        <li>✓ Importação de contatos e agenda</li>
+        <li>✓ Importação por CSV</li>
+        <li>✓ Backup local e Google Drive</li>
+        <li>✓ Resumo com estatísticas</li>
+        <li>✓ Tema, cores e tamanho de fonte</li>
+      </ul>
+
+      <div class="privacy-box">
+        <strong>Privacidade do Aniversários+</strong>
+        <p>O Aniversários+ possui uma política de privacidade própria, separada da política geral do site.</p>
+        <a class="text-link" href="../privacidade/aniversarios-plus.html">Ver Política de Privacidade do Aniversários+ →</a>
+      </div>
+
+      <h2 class="screens-title">Conheça o aplicativo</h2>
+      <div class="screens-grid">
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/calendario.jpeg" alt="Tela de calendário do Aniversários+"><figcaption>Calendário</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/importar-contatos.jpeg" alt="Tela de importação de contatos"><figcaption>Importar contatos</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/categorias.jpeg" alt="Tela de categorias personalizadas"><figcaption>Categorias</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/nova-ocasiao.jpeg" alt="Cadastro de nova ocasião"><figcaption>Nova ocasião</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/resumo.jpeg" alt="Tela de resumo do aplicativo"><figcaption>Resumo</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/lembretes-inteligentes.jpeg" alt="Tela de lembretes inteligentes"><figcaption>Lembretes inteligentes</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/backup-restaurar.jpeg" alt="Tela de backup e restauração"><figcaption>Backup / Restaurar</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/configuracoes.jpeg" alt="Tela de configurações"><figcaption>Configurações</figcaption></figure>
+        <figure class="screen-card"><img src="../assets/img/aniversarios-plus/mensagens-agendadas.jpeg" alt="Tela de mensagens agendadas"><figcaption>Mensagens agendadas</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><strong>Luiz Gustavo Pinto</strong><p>Desenvolvimento de aplicativos para Android.</p></div>
+    <div class="footer-links"><a href="../privacidade/">Privacidade</a><a href="../termos/">Termos</a><a href="../suporte/">Suporte</a></div>
+  </div>
+  <div class="container footer-bottom">© <span id="ano"></span> Luiz Gustavo Pinto. Todos os direitos reservados.</div>
+</footer>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
