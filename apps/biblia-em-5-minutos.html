@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bíblia em 5 Minutos: estudos bíblicos, ACF e NVI, devocionais, plano diário, desafios, leitura por voz, progresso e backup no Google Drive.">
+  <meta name="theme-color" content="#08111f">
+  <title>Bíblia em 5 Minutos | Luiz Gustavo Pinto</title>
+  <link rel="icon" href="../assets/img/biblia-em-5-minutos/icone-app.png" type="image/png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .biblia-page{--biblia-gold:#f0b84b;--biblia-blue:#2f80d0}
+    .biblia-hero{
+      padding:78px 0 50px;
+      background:
+        radial-gradient(circle at 82% 18%,rgba(240,184,75,.14),transparent 28%),
+        radial-gradient(circle at 12% 0%,rgba(92,124,255,.15),transparent 34%);
+    }
+    .biblia-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.55fr);gap:52px;align-items:center}
+    .biblia-kicker{display:inline-flex;align-items:center;gap:8px;color:#f4cf83;font-size:.82rem;font-weight:850;text-transform:uppercase;letter-spacing:.12em}
+    .biblia-hero h1{font-size:clamp(2.7rem,6vw,5.2rem);margin-top:12px}
+    .biblia-lead{font-size:1.18rem;max-width:720px}
+    .biblia-icon-wrap{
+      width:min(100%,340px);justify-self:end;padding:16px;border-radius:32px;
+      background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.025));
+      border:1px solid var(--line);box-shadow:var(--shadow)
+    }
+    .biblia-icon-wrap img{display:block;width:100%;border-radius:24px}
+    .biblia-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .biblia-actions .primary{background:linear-gradient(135deg,#d49727,#f0b84b);color:#08111f;box-shadow:0 14px 34px rgba(240,184,75,.20)}
+    .biblia-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .biblia-pill{padding:8px 12px;border-radius:999px;border:1px solid rgba(240,184,75,.25);background:rgba(240,184,75,.08);color:#f5d487;font-size:.84rem;font-weight:800}
+    .biblia-story{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .biblia-story-card{padding:26px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.04)}
+    .biblia-story-card strong{display:block;color:#f4cf83;margin-bottom:7px;font-size:1.05rem}
+    .biblia-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .biblia-feature{
+      min-height:180px;padding:22px;border-radius:18px;border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.026))
+    }
+    .biblia-feature-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;background:rgba(240,184,75,.11);border:1px solid rgba(240,184,75,.22);font-size:1.2rem}
+    .biblia-feature h3{font-size:1.08rem;margin-bottom:8px}
+    .screens-intro{max-width:770px}
+    .biblia-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:28px;align-items:start}
+    .biblia-screen{
+      margin:0;padding:10px;border-radius:22px;background:rgba(255,255,255,.035);
+      border:1px solid var(--line);box-shadow:0 16px 42px rgba(0,0,0,.16)
+    }
+    .biblia-screen img{display:block;width:100%;height:auto;border-radius:15px;background:#f3f6fb}
+    .biblia-screen figcaption{padding:12px 7px 5px;text-align:center;font-weight:800;color:var(--text);font-size:.91rem}
+    .biblia-screen:nth-child(3){grid-row:span 2}
+    .biblia-privacy{
+      display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch
+    }
+    .biblia-privacy-card{padding:30px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .biblia-privacy-card.gold{background:linear-gradient(145deg,rgba(240,184,75,.10),rgba(255,255,255,.03));border-color:rgba(240,184,75,.22)}
+    .biblia-privacy-list{display:grid;gap:12px;margin-top:20px}
+    .biblia-privacy-list span{display:block;padding:13px 15px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid var(--line);color:var(--muted)}
+    .biblia-note{margin-top:14px;font-size:.91rem;color:var(--muted)}
+    @media(max-width:900px){
+      .biblia-hero-grid,.biblia-privacy{grid-template-columns:1fr}
+      .biblia-icon-wrap{justify-self:start;width:min(280px,72vw)}
+      .biblia-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .biblia-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .biblia-screen:nth-child(3){grid-row:auto}
+    }
+    @media(max-width:580px){
+      .biblia-story,.biblia-feature-grid,.biblia-gallery{grid-template-columns:1fr}
+      .biblia-hero{padding-top:54px}
+      .biblia-icon-wrap{width:min(240px,70vw)}
+    }
+  </style>
+</head>
+<body class="biblia-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../">
+        <span class="brand-mark">LG</span>
+        <span><strong>Luiz Gustavo Pinto</strong><small>Aplicativos</small></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="menu-principal">
+        <span></span><span></span><span></span><span class="sr-only">Abrir menu</span>
+      </button>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal">
+        <a href="../#aplicativos">Aplicativos</a>
+        <a href="../privacidade/biblia-em-5-minutos.html">Privacidade</a>
+        <a href="../termos/">Termos</a>
+        <a href="../suporte/">Suporte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="biblia-hero">
+      <div class="container biblia-hero-grid">
+        <div>
+          <span class="biblia-kicker">Estudo bíblico diário • Android</span>
+          <h1>Bíblia em 5 Minutos</h1>
+          <p class="biblia-lead">
+            Uma jornada bíblica clara e acessível para transformar poucos minutos do dia
+            em leitura, reflexão, oração e aprendizado. Estude no seu ritmo, acompanhe o
+            progresso e mantenha a Palavra de Deus por perto.
+          </p>
+          <div class="biblia-meta">
+            <span class="biblia-pill">ACF e NVI</span>
+            <span class="biblia-pill">Estudos liberados</span>
+            <span class="biblia-pill">Devocional diário</span>
+            <span class="biblia-pill">Leitura por voz</span>
+          </div>
+          <div class="biblia-actions">
+            <a class="button primary" href="#recursos">Conhecer os recursos</a>
+            <a class="button secondary" href="../privacidade/biblia-em-5-minutos.html">Política de Privacidade</a>
+          </div>
+        </div>
+        <div class="biblia-icon-wrap">
+          <img src="../assets/img/biblia-em-5-minutos/icone-app.png" alt="Ícone do aplicativo Bíblia em 5 Minutos">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Uma experiência pensada para a rotina</span>
+          <h2>Aprender, refletir e avançar com liberdade</h2>
+          <p>
+            O aplicativo reúne estudo bíblico, leitura completa, devocional e acompanhamento
+            pessoal em uma interface simples, com tema claro e escuro e opções de acessibilidade.
+          </p>
+        </div>
+        <div class="biblia-story">
+          <div class="biblia-story-card">
+            <strong>Jornada em ordem bíblica</strong>
+            <p>Estudos organizados de Gênesis a Apocalipse, seguindo a ordem dos 66 livros. Todos os módulos ficam disponíveis para navegação livre.</p>
+          </div>
+          <div class="biblia-story-card">
+            <strong>Sua Bíblia, sua preferência</strong>
+            <p>Escolha entre Almeida Corrigida Fiel (ACF) e Nova Versão Internacional (NVI). A tradução selecionada é aplicada no leitor, nos estudos e nas referências exibidas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="recursos" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Recursos</span>
+          <h2>Mais do que uma leitura: uma jornada acompanhada</h2>
+        </div>
+        <div class="biblia-feature-grid">
+          <article class="biblia-feature"><div class="biblia-feature-icon">📖</div><h3>Estudos bíblicos</h3><p>Conteúdo organizado por módulos para estudar passagens e avançar de Gênesis a Apocalipse.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">☀️</div><h3>Devocional do dia</h3><p>Versículo, reflexão, aplicação prática, pergunta para meditar e oração para acompanhar o dia.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">🎯</div><h3>Desafios e revisão</h3><p>Metas diárias, semanais e mensais, além de revisão inteligente para reforçar o aprendizado.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">📅</div><h3>Plano diário</h3><p>Uma rotina objetiva com lição, oração, reflexão e perguntas, além do calendário de sequência.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">🔊</div><h3>Leitura por voz</h3><p>Text-to-Speech do Android em português do Brasil, com controle de velocidade para uma leitura mais confortável.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">☁️</div><h3>Backup no Google Drive</h3><p>Backup e restauração de progresso, preferências, favoritos, anotações e capítulos lidos, com histórico controlado pelo app.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">❤️</div><h3>Favoritos e anotações</h3><p>Salve versículos, estudos e notas para retornar rapidamente ao conteúdo mais importante para você.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">📊</div><h3>Perfil e estatísticas</h3><p>Acompanhe XP, sequência, lições concluídas, capítulos lidos, livros concluídos e desempenho nas perguntas.</p></article>
+          <article class="biblia-feature"><div class="biblia-feature-icon">🎨</div><h3>Personalização</h3><p>Tema claro ou escuro, cores do aplicativo e diversos tamanhos de texto para melhorar conforto e leitura.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading screens-intro">
+          <span class="eyebrow">Telas do aplicativo</span>
+          <h2>Conheça o Bíblia em 5 Minutos</h2>
+          <p>As imagens abaixo estão apresentadas na mesma sequência em que foram fornecidas, mostrando a experiência desde a abertura até as configurações.</p>
+        </div>
+        <div class="biblia-gallery">
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/01-splash.jpg" alt="Tela de abertura do Bíblia em 5 Minutos"><figcaption>1. Abertura</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/02-menu-principal.jpg" alt="Menu principal do Bíblia em 5 Minutos"><figcaption>2. Menu principal</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/03-estudos.jpg" alt="Tela de estudos em ordem bíblica"><figcaption>3. Estudos</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/04-devocional.jpg" alt="Tela do devocional do dia"><figcaption>4. Devocional</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/05-desafios.jpg" alt="Tela de desafios e revisão inteligente"><figcaption>5. Desafios</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/06-plano-diario.jpg" alt="Tela do plano diário e calendário de sequência"><figcaption>6. Plano diário</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/07-perfil.jpg" alt="Tela de perfil e resumo de progresso"><figcaption>7. Perfil</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/08-estatisticas.jpg" alt="Tela de estatísticas do aplicativo"><figcaption>8. Estatísticas</figcaption></figure>
+          <figure class="biblia-screen"><img loading="lazy" src="../assets/img/biblia-em-5-minutos/09-configuracoes.jpg" alt="Tela de configurações com tema, Bíblia, voz e backup"><figcaption>9. Configurações</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container biblia-privacy">
+        <div class="biblia-privacy-card gold">
+          <span class="eyebrow">Privacidade</span>
+          <h2>Transparência sobre seus dados</h2>
+          <p>
+            O Bíblia em 5 Minutos armazena preferências e progresso para oferecer continuidade entre as sessões.
+            Quando o usuário utiliza o backup, o aplicativo pode acessar o Google Drive mediante autorização da própria conta Google.
+            O app também utiliza Google AdMob para publicidade.
+          </p>
+          <a class="button primary" href="../privacidade/biblia-em-5-minutos.html">Ler a Política de Privacidade</a>
+        </div>
+        <div class="biblia-privacy-card">
+          <h3>Compromissos do aplicativo</h3>
+          <div class="biblia-privacy-list">
+            <span>✓ Conexões com serviços Google realizadas por canais seguros.</span>
+            <span>✓ Conta Google usada apenas quando necessária para o recurso de Google Drive.</span>
+            <span>✓ Dados locais podem ser removidos limpando os dados do app ou desinstalando.</span>
+            <span>✓ Política específica e canal de suporte disponíveis neste site.</span>
+          </div>
+          <p class="biblia-note">Consulte a política completa para detalhes sobre publicidade, backups, permissões e serviços de terceiros.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-card" style="margin-bottom:0">
+          <span class="eyebrow">Suporte</span>
+          <h2>Dúvidas ou precisa de ajuda?</h2>
+          <p>Utilize o canal de suporte para dúvidas sobre o aplicativo, backup, funcionamento ou privacidade.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="../suporte/">Acessar suporte</a>
+            <a class="button secondary" href="../">Voltar aos aplicativos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Bíblia em 5 Minutos</strong><p>Desenvolvido por Luiz Gustavo Pinto.</p></div>
+      <div class="footer-links">
+        <a href="../privacidade/biblia-em-5-minutos.html">Privacidade</a>
+        <a href="../termos/">Termos</a>
+        <a href="../suporte/">Suporte</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="ano"></span> Luiz Gustavo Pinto. Todos os direitos reservados.</div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
